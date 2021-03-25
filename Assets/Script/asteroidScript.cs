@@ -16,4 +16,6 @@ void  Start (){
 void  OnBecameInvisible (){
     Destroy(gameObject);
 } 
+
+ 
 }
