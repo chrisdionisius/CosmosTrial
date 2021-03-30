@@ -5,7 +5,7 @@ using UnityEngine;
 public class spaceshipScript : MonoBehaviour{
     public float speed = 10;
     private Rigidbody2D rigidBody2D;
-    public  GameObject bullet;
+    public GameObject bullet;
 
     void Awake(){
         rigidBody2D = GetComponent<Rigidbody2D>();
@@ -20,8 +20,16 @@ public class spaceshipScript : MonoBehaviour{
     }
 
     void  Update (){ 
-    if (Input.GetKeyDown("space")) {
+        if (Input.GetKeyDown("space")){
+            InvokeRepeating("shoot", 0.01f, 0.1f);
+        }
+            
+        else if(Input.GetKeyUp("space")){
+            CancelInvoke("shoot");
+        }
+    }
+
+    void shoot(){
         Instantiate(bullet, transform.position, Quaternion.identity);
     }
-}
 }

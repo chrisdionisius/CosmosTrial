@@ -55,7 +55,7 @@ TagManager:
   - name: Background
     uniqueID: 1947543829
     locked: 0
-  - name: Planets
+  - name: Stars
     uniqueID: 4094135763
     locked: 0
   - name: Projectile
@@ -75,4 +75,7 @@ TagManager:
     locked: 0
   - name: Asteroid
     uniqueID: 219720219
+    locked: 0
+  - name: Planets
+    uniqueID: 933960041
     locked: 0
