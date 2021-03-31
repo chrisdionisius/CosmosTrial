@@ -7,21 +7,31 @@ public class GameController : MonoBehaviour
 {
     public Text scoreText;
     private int score;
-
-    void Start ()
-    {
+    public GameObject gate;
+    public spawnScript spawn;
+    
+    void Start (){
         score = 0;
         UpdateScore ();
+        if (gate.activeInHierarchy){
+             gate.SetActive(false);
+        }
+         StartCoroutine(LateCall());
     }
 
-    public void AddScore ()
-    {
+    public void AddScore (){
         score += 1;
         UpdateScore ();
     }
 
-    void UpdateScore ()
-    {
+    void UpdateScore (){
         scoreText.text = "Score: " + score;
     }
+
+    IEnumerator LateCall(){
+         yield return new WaitForSeconds(10f);
+         gate.SetActive(true);
+         spawn.endGame();
+     }
+
 }

@@ -29,4 +29,10 @@ void  addAsteroid (){
     // Create an enemy at the 'spawnPoint' position
     Instantiate(asteroid, spawnPoint, Quaternion.identity);
 } 
+
+public void endGame(){
+    Debug.Log("endgame");
+    CancelInvoke("addAsteroid");
+}
+
 }

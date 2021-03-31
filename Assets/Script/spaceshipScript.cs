@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class spaceshipScript : MonoBehaviour{
     public float speed = 10;
@@ -10,6 +11,10 @@ public class spaceshipScript : MonoBehaviour{
     void Awake(){
         rigidBody2D = GetComponent<Rigidbody2D>();
     }
+
+    void OnTriggerEnter2D(Collider2D hit){
+    }
+
     void FixedUpdate(){
         float xMove = Input.GetAxis("Horizontal");
         float yMove = Input.GetAxis("Vertical");
