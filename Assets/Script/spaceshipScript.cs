@@ -12,8 +12,6 @@ public class spaceshipScript : MonoBehaviour{
         rigidBody2D = GetComponent<Rigidbody2D>();
     }
 
-    void OnTriggerEnter2D(Collider2D hit){
-    }
 
     void FixedUpdate(){
         float xMove = Input.GetAxis("Horizontal");
