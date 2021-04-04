@@ -9,7 +9,7 @@ public class HealthScript : MonoBehaviour
     public Image[] spaceshipPlaceholders;
     public Sprite livesOn;
     public Sprite livesOff;
-    private int totalLives = 3;
+    public int totalLives = 3;
     public GameObject gameOver;
     /*public PauseMenu PauseMenu;*/
 
@@ -32,6 +32,7 @@ public class HealthScript : MonoBehaviour
         }
         else 
         {
+            spaceshipPlaceholders[0].sprite = livesOff;
             gameOver.gameObject.SetActive(true);
             Time.timeScale = 0f;
         } 
@@ -44,6 +45,10 @@ public class HealthScript : MonoBehaviour
             totalLives--;
             OnChangeSpaceShipTotal(totalLives);
             Destroy(hit.gameObject);
+        }
+        if (hit.CompareTag("Gate"))
+        {
+            SceneManager.LoadScene("Menu");
         }
     }
 

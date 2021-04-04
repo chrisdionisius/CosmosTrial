@@ -12,7 +12,6 @@ public class spaceshipScript : MonoBehaviour{
         rigidBody2D = GetComponent<Rigidbody2D>();
     }
 
-
     void FixedUpdate(){
         float xMove = Input.GetAxis("Horizontal");
         float yMove = Input.GetAxis("Vertical");
@@ -26,7 +25,6 @@ public class spaceshipScript : MonoBehaviour{
         if (Input.GetKeyDown("space")){
             InvokeRepeating("shoot", 0.01f, 0.1f);
         }
-            
         else if(Input.GetKeyUp("space")){
             CancelInvoke("shoot");
         }

@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
     }
 
     IEnumerator LateCall(){
-         yield return new WaitForSeconds(10f);
+         yield return new WaitForSeconds(5f);
          gate.SetActive(true);
          spawn.endGame();
      }
