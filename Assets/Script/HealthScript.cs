@@ -11,6 +11,8 @@ public class HealthScript : MonoBehaviour
     public Sprite livesOff;
     public int totalLives = 3;
     public GameObject gameOver;
+
+    public GameObject blowAnimation;
     /*public PauseMenu PauseMenu;*/
 
     void Start()
@@ -45,11 +47,17 @@ public class HealthScript : MonoBehaviour
             totalLives--;
             OnChangeSpaceShipTotal(totalLives);
             Destroy(hit.gameObject);
+            PlayExplosion();
         }
         if (hit.CompareTag("Gate"))
         {
             SceneManager.LoadScene("Menu");
         }
+    }
+
+    void PlayExplosion(){
+        GameObject explosion = (GameObject)Instantiate(blowAnimation);
+        explosion.transform.position = transform.position;
     }
 
     public void Restart()
