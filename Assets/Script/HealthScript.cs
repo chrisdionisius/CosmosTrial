@@ -11,7 +11,6 @@ public class HealthScript : MonoBehaviour
     public Sprite livesOff;
     public int totalLives = 3;
     public GameObject gameOver;
-
     public GameObject blowAnimation;
     /*public PauseMenu PauseMenu;*/
 
@@ -43,6 +42,20 @@ public class HealthScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hit)
     {
         if (hit.CompareTag("asteroid"))
+        {
+            totalLives--;
+            OnChangeSpaceShipTotal(totalLives);
+            Destroy(hit.gameObject);
+            PlayExplosion();
+        }
+        if (hit.CompareTag("EnemyBullet"))
+        {
+            totalLives--;
+            OnChangeSpaceShipTotal(totalLives);
+            Destroy(hit.gameObject);
+            PlayExplosion();
+        }
+        if (hit.CompareTag("Enemy"))
         {
             totalLives--;
             OnChangeSpaceShipTotal(totalLives);

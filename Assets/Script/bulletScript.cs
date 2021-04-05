@@ -10,7 +10,6 @@ public class bulletScript : MonoBehaviour {
     private GameController gameController;
     public GameObject ExplotionAnimation;
 
-
     void Start(){
         rb.velocity = transform.up * speed;
         GameObject gameControllerObject = GameObject.FindWithTag ("GameController");
@@ -32,7 +31,17 @@ public class bulletScript : MonoBehaviour {
             Destroy(hit.gameObject);
             PlayExplosion();
             gameController.AddScore();
-            // GameController.updateScore();
+        }
+        if (hit.CompareTag("Enemy")){
+            Destroy(this.gameObject);
+            Destroy(hit.gameObject);
+            PlayExplosion();
+            gameController.AddScore();
+        }
+        if (hit.CompareTag("EnemyBullet")){
+            Destroy(this.gameObject);
+            Destroy(hit.gameObject);
+            PlayExplosion();
         }
     }
 

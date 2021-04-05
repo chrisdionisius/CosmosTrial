@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TitleMenuController : MonoBehaviour
-{
+public class TitleMenuController : MonoBehaviour{
+    public GameObject pauseMenuUI;
+
     public void LoadGame(){
-        SceneManager.LoadScene("Level1");
+        pauseMenuUI.SetActive(true);
     }
     public void ExitGame(){
         Application.Quit();
     }
+    public void LoadLevel1(){
+        SceneManager.LoadScene("Level1");
+    }
+    public void LoadLevel2(){
+        SceneManager.LoadScene("Level2");
+    }
 }
+

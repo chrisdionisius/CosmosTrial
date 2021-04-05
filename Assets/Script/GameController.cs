@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,8 +20,8 @@ public class GameController : MonoBehaviour
          StartCoroutine(LateCall());
     }
 
-    public void AddScore (){
-        score += 1;
+    public void AddScore(){
+        score++;
         UpdateScore ();
     }
 
@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
     }
 
     IEnumerator LateCall(){
-         yield return new WaitForSeconds(5f);
+         yield return new WaitForSeconds(30f);
          background.stopMovement();
          gate.SetActive(true);
          spawn.endGame();

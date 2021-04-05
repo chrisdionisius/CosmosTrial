@@ -16,6 +16,7 @@ TagManager:
   - Rocket
   - asteroid
   - Gate
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
