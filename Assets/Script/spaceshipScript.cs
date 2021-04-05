@@ -8,8 +8,6 @@ public class spaceshipScript : MonoBehaviour{
     private Rigidbody2D rigidBody2D;
     public GameObject bullet;
 
-    public GameObject Rocket1;
-
     void Awake(){
         rigidBody2D = GetComponent<Rigidbody2D>();
     }
@@ -22,16 +20,7 @@ public class spaceshipScript : MonoBehaviour{
         Vector2 newVelocity = new Vector2(xSpeed, ySpeed);
         rigidBody2D.velocity = newVelocity;
     }
-
-    void PlayRocket(){
-        GameObject explosion = (GameObject)Instantiate(Rocket1);
-        explosion.transform.position = transform.position;
-    }
     void  Update (){ 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            PlayRocket();
-        }
         if (Input.GetKeyDown("space")){
             InvokeRepeating("shoot", 0.01f, 0.1f);
         }
