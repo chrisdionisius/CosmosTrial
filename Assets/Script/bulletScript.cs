@@ -8,6 +8,7 @@ public class bulletScript : MonoBehaviour {
     public float speed = 10f;
     public Rigidbody2D rb;
     private GameController gameController;
+    public GameObject ExplotionAnimation;
 
 
     void Start(){
@@ -29,8 +30,14 @@ public class bulletScript : MonoBehaviour {
         if (hit.CompareTag("asteroid")){
             Destroy(this.gameObject);
             Destroy(hit.gameObject);
+            PlayExplosion();
             gameController.AddScore();
             // GameController.updateScore();
         }
+    }
+
+    void PlayExplosion(){
+        GameObject explosion = (GameObject)Instantiate(ExplotionAnimation);
+        explosion.transform.position = transform.position;
     }
 }

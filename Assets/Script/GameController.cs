@@ -8,8 +8,9 @@ public class GameController : MonoBehaviour
     public Text scoreText;
     private int score;
     public GameObject gate;
+    public BGScroll background;
     public spawnScript spawn;
-    
+
     void Start (){
         score = 0;
         UpdateScore (); 
@@ -30,6 +31,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator LateCall(){
          yield return new WaitForSeconds(5f);
+         background.stopMovement();
          gate.SetActive(true);
          spawn.endGame();
      }

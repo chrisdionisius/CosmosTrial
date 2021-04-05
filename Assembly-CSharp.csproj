@@ -39,6 +39,7 @@
      <Compile Include="Assets\Space Shooter Template FREE\Scripts\RepeatingBackground.cs" />
      <Compile Include="Assets\Space Shooter Template FREE\Scripts\PlayerShooting.cs" />
      <Compile Include="Assets\Script\spawnScript.cs" />
+     <Compile Include="Assets\Script\BGScroll.cs" />
      <Compile Include="Assets\Space Shooter Template FREE\Scripts\FollowThePath.cs" />
      <Compile Include="Assets\Space Shooter Template FREE\Scripts\VisualEffect.cs" />
      <Compile Include="Assets\Script\HealthScript.cs" />
@@ -59,6 +60,7 @@
      <Compile Include="Assets\Script\asteroidScript.cs" />
      <Compile Include="Assets\Script\bulletScript.cs" />
      <Compile Include="Assets\Space Shooter Template FREE\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Script\Explosion.cs" />
      <None Include="Assets\space shooter assets\License.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/2020.3.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
