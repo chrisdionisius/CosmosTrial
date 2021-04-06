@@ -247,7 +247,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   bullet: {fileID: 1361147521}
-  Rocket1: {fileID: 0}
 --- !u!114 &126969840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -993,6 +992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 733090876}
   - component: {fileID: 733090875}
+  - component: {fileID: 733090877}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -1012,10 +1012,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0284b00d89d645479541676050bd453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1704376224}
-  gate: {fileID: 698885479}
-  background: {fileID: 1690787785}
-  spawn: {fileID: 2047741446}
 --- !u!4 &733090876
 Transform:
   m_ObjectHideFlags: 0
@@ -1030,6 +1026,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &733090877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733090874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848287a63d7a1d647b7148c144494877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1704376224}
+  gate: {fileID: 698885479}
+  background: {fileID: 1690787785}
+  spawn: {fileID: 2047741446}
 --- !u!1 &808764730
 GameObject:
   m_ObjectHideFlags: 0
